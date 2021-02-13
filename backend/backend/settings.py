@@ -27,7 +27,11 @@ SECRET_KEY = 'w7q6*^(nnwbs^4n45$&u4$d87tae%#=q_^0a6q8yy3cci+%=+n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://mmpp-calgary-hacks-2021.herokuapp.com/',
+    'localhost',
+    '127.0.0.1'
+]
 
 # Application definition
 
