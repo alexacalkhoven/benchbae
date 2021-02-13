@@ -1,8 +1,8 @@
 from django.db import models
 
 class Bench(models.Model):
-    latitude = models.FloatField()
-    longitude = models.FloatField()
-    location_detail = models.CharField(max_length=200)
-    orientation = models.CharField(max_length=10)
-    life_cycle_status = models.CharField(max_length=200)
+    latitude = models.FloatField(null=False)
+    longitude = models.FloatField(null=False)
+    location_detail = models.CharField(max_length=200, null=False)
+    orientation = models.CharField(max_length=200, null=False)
+    life_cycle_status = models.CharField(max_length=200, null=False)
