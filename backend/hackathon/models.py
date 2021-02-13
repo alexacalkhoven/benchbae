@@ -1,5 +1,6 @@
 from django.db import models
 
+# Create your models here.
 class Bench(models.Model):
     latitude = models.FloatField(null=False)
     longitude = models.FloatField(null=False)
