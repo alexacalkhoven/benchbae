@@ -12,7 +12,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 import django_heroku
+import connection_url
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +31,11 @@ SECRET_KEY = 'w7q6*^(nnwbs^4n45$&u4$d87tae%#=q_^0a6q8yy3cci+%=+n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+# Configure database
+DATABASES = {
+    'default': connection_url.config('DATABASE_URL')
+}
 
 ALLOWED_HOSTS = [
     'https://mmpp-calgary-hacks-2021.herokuapp.com/',
@@ -44,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'hackathon'
 ]
 
 MIDDLEWARE = [
