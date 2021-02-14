@@ -15,6 +15,9 @@ Mental health concerns have become more and more pressing over the years. Due to
 
 BenchBae puts an innovative twist on the standard date night process. Our application lets users find the closest west-facing bench to watch the sunset with their partner. This spontaneous and intimate experience is elevated with a hearty meal from a nearby restaurant as recommended by our app. The result is an experience that not only stimulates the local economy but allows users to safely enjoy the company of their loved ones with a beautiful Calgary sunset backdrop. In the future, we hope to continually improve BenchBae and magnify our impact on Calgary’s future. We would love to focus our restaurant recommendations on local businesses, further helping the business owners who need it most. 
 
+## How we built it
+BenchBae comes to life with a Django & Python backend and a React & Typescript front end, tied together with a REST API and a PostgreSQL database. We took advantage of Google Cloud’s places API and the Calgary Data Centre to allow an accurate mapping to the perfect dating location.
+
 ## Authors
 Alexa Calkhoven  
 Jordan Kwan  
