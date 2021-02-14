@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from hackathon.views import PopulateDatabase, BenchView, ClosestBench
+from hackathon.views import PopulateDatabase, BenchView, ClosestBench, ClosestEatery
 from rest_framework import routers
 
 
@@ -26,5 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('populate-db', PopulateDatabase.as_view()),
     path('closest-bench', ClosestBench.as_view()),
+    path('closest-eatery', ClosestEatery.as_view()),
     path('api/', include(router.urls)),   
 ]
