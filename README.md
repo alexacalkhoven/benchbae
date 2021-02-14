@@ -1,10 +1,11 @@
 # BenchBae
 MMPP (Team 1) Calgary Hacks 2021 Submission.  
-We are submitting to Tier 1, as well as the Google Cloud, Cloud Computing and UX/UI bounty.
+We are submitting to Tier 1, as well as the Google Cloud, Cloud Computing, Domain Name and UX/UI bounty.
 
 ## Access
 Find BenchBae here: https://benchbae.netlify.app/  
 Or hosted on Firebase: https://mmmpp-calgary-hacks-2021.web.app/
+Or on our custom domain: http://benchbae.me/
 
 ## About
 BenchBae was inspired by a dataset detailing Calgary’s park benches from Calgary’s municipal open-source data. 
@@ -27,6 +28,3 @@ Tyler Yip
 ## Acknowledgements
 Bench data from the City of Calgary (https://data.calgary.ca/Recreation-and-Culture/Parks-Seating-West-facing-wooden-benches-to-watch-/n6v5-frqe)  
 Restaurant data from the Google Places API 
-
-
-
