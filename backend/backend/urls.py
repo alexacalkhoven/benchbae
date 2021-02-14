@@ -15,16 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from hackathon.views import PopulateDatabase
+from hackathon.views import PopulateDatabase, BenchView
 from rest_framework import routers
 
 
 router = routers.DefaultRouter()
-router.register(r'populate-db', PopulateDatabase, 'populate-db')
+router.register(r'bench', BenchView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('populate-db',PopulateDatabase)
-    path('api/', include(router.urls))
+    path('populate-db', PopulateDatabase.as_view()),
+    path('api/', include(router.urls)),
     
 ]
