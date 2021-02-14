@@ -9,8 +9,17 @@ body {
 }
 
 .logo {
-  max-width: 20%;
+  max-width: 5%;
+  margin: 1%;
   height: auto;
+  float: left;
+}
+
+.bench-bae {
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
 }
 
 .two-people {
@@ -21,7 +30,35 @@ body {
 }
 
 .bench-button {
+  background-color: #355c7d;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5%;
+}
+
+.bench-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.motivation {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.blue-woman-sitting {
+  width: 20%;
+  float: left;
+  margin-top: 10%;
 }
