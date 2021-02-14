@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandingPage from '../LandingPage/LandingPage';
 import ResultsPage from '../ResultsPage/ResultsPage';
-import Nav from '../Nav/Nav';
 import { BenchBaeProvider } from '../../contexts/BenchBaeContext';
 import './App.css';
 
