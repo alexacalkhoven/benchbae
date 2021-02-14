@@ -1,7 +1,15 @@
-.results-page {
+.results-main {
     /* background-image: linear-gradient(to bottom, #e8c0ccff, white); */
+    background-color: #e8c0ccff;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.results-content {
+  width: 65%;
+  height: 100%;
+  margin: auto;
 }
 
 .results-plants {
@@ -14,8 +22,8 @@
 
 .results-container {
   display: grid;
-  width: 60%;
   margin: auto;
+  width: 100%;
   margin-bottom: 100px;
   padding-top: 10%;
   grid-template-columns: 50% 50%;
@@ -43,47 +51,39 @@
 
 .results-map {
   border-radius: 4%;
-  width: 60%;
-  height: 40vh;
-  margin: auto;
+  width: 100%;
+  height: 60vh;
+  margin: 50px auto auto auto;
 }
 
 .bench-icon {
-  width: 20%;
-  height: auto;
+  width: 32px;
+  height: 32px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
-.eatry-icon {
-  width: 15%;
-  height: auto;
+.eatery-icon {
+  width: 32px;
+  height: 32px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .bench-icon-map {
-  width: 7%;
+  cursor: pointer;
+  width: 46px;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
-.eatry-icon-map {
-  width: 5%;
+.eatery-icon-map {
+  cursor: pointer;
+  width: 32px;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+}
+
+.results-hint {
+  color: white;
+  opacity: 0.9;
+  text-align: center;
 }

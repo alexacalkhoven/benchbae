@@ -1,24 +1,23 @@
-
 .nav-logo-container {
-    opacity: 0;
 }
 
 .nav-logo-link {
-    cursor: pointer;
-    display: flex;
-    text-decoration: none;
-    width: fit-content;
-    transition: all 150ms ease;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  width: fit-content;
+  transition: all 150ms ease;
 }
 
 .nav-logo-link:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .nav-logo-fade {
-    animation-name: fade-in;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 
 .nav-logo {

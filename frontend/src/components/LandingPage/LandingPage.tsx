@@ -1,6 +1,9 @@
 import Nav from '../Nav/Nav';
 import './LandingPage.css';
 import TwoPeople from '../../assets/two-people-standing.svg';
+import ManPurpleSitting from '../../assets/man-purple-sitting.svg';
+import WomanPinkStanding from '../../assets/woman-pink-standing.svg';
+import PlantsPlain from '../../assets/plants-plain.svg';
 import BenchBaeContext from '../../contexts/BenchBaeContext';
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -27,7 +30,12 @@ const LandingPage = () => {
       <div className="landingpage-content">
         <Nav fade={true} />
 
-        <img src={TwoPeople} alt="Logo" className="landingpage-image"></img>
+        <img src={TwoPeople} alt="Logo" className="landingpage-image"/>
+        {/* <img src={PlantsPlain} alt="Plants" className="landingpage-image" /> */}
+
+        {/* <img src={ManPurpleSitting} alt="" />
+        <img src={WomanPinkStanding} alt="" /> */}
+
         {loading ? (
           <div className="landingpage-loading">
             <div className="landingpage-loading-container">
