@@ -1,9 +1,9 @@
 .results-main {
-    /* background-image: linear-gradient(to bottom, #e8c0ccff, white); */
-    background-color: #e8c0ccff;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  /* background-image: linear-gradient(to bottom, #e8c0ccff, white); */
+  background-color: #e8c0ccff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .results-content {
@@ -86,4 +86,31 @@
   color: white;
   opacity: 0.9;
   text-align: center;
+}
+
+/* Mapbox styling */
+.mapboxgl-popup-content {
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.eatery-close-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.bench-close-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
 }
