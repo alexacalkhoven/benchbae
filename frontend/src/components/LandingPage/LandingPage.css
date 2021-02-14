@@ -12,13 +12,14 @@
 }
 
 .landingpage-image-container {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .landingpage-image-pretext {
   color: #355c7d;
   text-align: center;
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 3vh;
   opacity: 0;
   animation-name: fade-in;
   animation-fill-mode: forwards;
@@ -30,14 +31,29 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  max-width: 750px;
+  /* width: auto; */
+  /* height: 100%; */
+  /* max-width: 400px; */
+  /* max-width: 200px; */
   /* max-width: 900px; */
+  max-height: 47vh;
   opacity: 0;
   animation-name: fade-in;
   animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-delay: 500ms;
+}
+
+@media screen and (min-height: 800px) {
+  .landingpage-image {
+    max-height: 60vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .landingpage-image {
+    max-width: 750px;
+  }
 }
 
 .landingpage-loading {
