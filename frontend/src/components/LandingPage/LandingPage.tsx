@@ -4,6 +4,7 @@ import TwoPeople from '../../assets/two-people-standing.svg';
 import ManPurpleStanding from '../../assets/man-standing-purple.svg';
 import WomanPinkSitting from '../../assets/woman-sitting-plants-pink.svg';
 import PlantsPlain from '../../assets/plants-plain.svg';
+import LandingImage from '../../assets/landing-image-4.png';
 import BenchBaeContext from '../../contexts/BenchBaeContext';
 import { useContext, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -41,8 +42,9 @@ const LandingPage = () => {
           {/* <img src={PlantsPlain} alt="Plants" className="landingpage-image" /> */}
 
           <div className="landingpage-image">
-            <img className="landingpage-image1" src={WomanPinkSitting} alt="" />
-            <img className="landingpage-image2" src={ManPurpleStanding} alt="" />
+            {/* <img className="landingpage-image1" src={WomanPinkSitting} alt="" />
+            <img className="landingpage-image2" src={ManPurpleStanding} alt="" /> */}
+            <img className="landingpage-image" src={LandingImage} alt="" />
           </div>
 
           {loading ? (

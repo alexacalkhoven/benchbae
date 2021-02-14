@@ -16,7 +16,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
+  width: 80%;
+  /* max-width: 900px; */
   opacity: 0;
   animation-name: fade-in;
   animation-fill-mode: forwards;
