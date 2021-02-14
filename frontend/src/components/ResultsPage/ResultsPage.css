@@ -1,0 +1,40 @@
+.results-page {
+    background-image: linear-gradient(to bottom, #e8c0ccff, white);
+    width: 100%;
+    height: 100%;
+}
+
+.results-plants {
+    position: absolute;
+    left: 25%;
+    display: block;
+    /* width: 500px; */
+    /* margin: auto; */
+}
+
+.results-container {
+    padding-top: 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+.results-bench {
+    margin: auto;
+    text-align: center;
+    background: white;
+    border-radius: 4%;
+    width: 250px;
+    height: 100px;
+    z-index: 10;
+}
+
+.results-restaurant {
+    margin: auto;
+    text-align: center;
+    background: white;
+    border-radius: 4%;
+    width: 250px;
+    height: 100px;
+    z-index: 10;
+}
