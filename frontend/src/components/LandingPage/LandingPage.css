@@ -1,5 +1,6 @@
 .landingpage-main {
   background-image: linear-gradient(to bottom, #e8c0ccff, white);
+  overflow-x: hidden;
 }
 
 .landingpage-content {
@@ -7,16 +8,24 @@
   margin: auto;
 }
 
+.landingpage-front {
+  height: 100vh;
+}
+
 .landingpage-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: fit-content;
   opacity: 0;
   animation-name: fade-in;
   animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-delay: 250ms;
+}
+
+.landingpage-image2 {
+  transform: scaleX(-1);
 }
 
 .landingpage-loading {
@@ -59,14 +68,18 @@
 }
 
 .landingpage-expand-icon {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: calc(50% - 32px);
+  transform: translateX(-50%);
   color: white;
   text-align: center;
   transition: all 150ms ease;
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
   transform-origin: bottom;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
-  
+  animation-iteration-count: infinite;  
 }
 
 .landingpage-expand-icon span {
@@ -82,6 +95,11 @@
 
 .landingpage-expand-icon:hover {
   opacity: 0.8;
+}
+
+.motivation-container {
+  padding-top: 120px;
+  height: 100vh;
 }
 
 .motivation {
