@@ -4,6 +4,7 @@ We are submitting to Tier 1, as well as the Cloud Computing and UX/UI bounty.
 
 ## Access
 Find BenchBae here: https://benchbae.netlify.app/
+Or hosted on Firebase: https://mmmpp-calgary-hacks-2021.web.app/
 
 ## About
 BenchBae was inspired by a dataset detailing Calgary’s park benches from Calgary’s municipal open-source data. 
