@@ -14,10 +14,12 @@ jobs:
         with:
           node-version: '12'
       # - run: npm ci
-      - run: cd frontend
       - run: npm run build
+        working-directory: frontend
+
       - name: GitHub Action for Firebase
         uses: w9jds/firebase-action@v1.5.0
+        working-directory: frontend
         with:
           args: deploy --only hosting
         env:
