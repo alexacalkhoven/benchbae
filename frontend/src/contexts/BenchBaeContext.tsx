@@ -8,6 +8,7 @@ interface IBenchBaeContext {
   requestBench: () => Promise<Bench>;
   requestEatery: (bench: Bench) => Promise<Eatery>;
   loading: boolean;
+  userLocation: { long: number; lat: number };
   bench: Bench;
   eatery: Eatery;
 }
@@ -17,6 +18,10 @@ const BenchBaeContext = React.createContext<IBenchBaeContext>(null as any);
 
 export const BenchBaeProvider = ({ children }: { children: any }) => {
   const [loading, setLoading] = useState(false);
+  const [userLocation, setUserLocation] = useState<{
+    long: number;
+    lat: number;
+  }>({long: 0, lat: 0});
   const [bench, setBench] = useState<Bench>(null as any);
   const [eatery, setEatery] = useState<Eatery>(null as any);
 
@@ -37,6 +42,11 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
 
       navigator.geolocation.getCurrentPosition(
         (location) => {
+          setUserLocation({
+            long: location.coords.longitude,
+            lat: location.coords.latitude,
+          });
+
           axios
             .get(API_URL + '/closest-bench', {
               params: {
@@ -46,7 +56,7 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
             })
             .then((res) => {
               const bench = res.data as Bench;
-              console.log('saved calgary with bench', bench);
+              console.log('Congrats you saved calgary with a bench:', bench);
               setBench(bench);
               resolve(bench);
             })
@@ -102,6 +112,7 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
         loading,
         requestBench,
         requestEatery,
+        userLocation,
         bench,
         eatery,
       }}

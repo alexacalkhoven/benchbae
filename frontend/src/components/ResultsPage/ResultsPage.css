@@ -56,15 +56,10 @@
   margin: 50px auto auto auto;
 }
 
-.bench-icon {
-  width: 32px;
-  height: 32px;
-  display: block;
-}
-
-.eatery-icon {
-  width: 32px;
-  height: 32px;
+.user-icon-map {
+  cursor: pointer;
+  width: 45px;
+  height: auto;
   display: block;
 }
 
@@ -95,19 +90,16 @@
   border-radius: 10px;
 }
 
+.mapboxgl-popup-content p {
+  
+}
+
 .mapboxgl-popup-content-wrapper {
   padding: 1%;
 }
 
-.eatery-close-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  align-items: center;
-}
-
-.bench-close-button {
+.popup-close-button {
+  cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;

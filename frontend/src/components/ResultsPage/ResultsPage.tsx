@@ -1,14 +1,9 @@
-import ReactMapboxGl, {
-  Layer,
-  Feature,
-  Image,
-  Marker,
-  Popup,
-} from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './ResultsPage.css';
 import BenchIcon from '../../assets/bench_icon.png';
 import EateryIcon from '../../assets/fork_and_knife_icon.png';
+import UserIcon from '../../assets/user_icon.png';
 import BenchBaeContext from '../../contexts/BenchBaeContext';
 import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
@@ -21,15 +16,17 @@ const Map = ReactMapboxGl({
 });
 
 const ResultsPage = () => {
-  const { bench, eatery } = useContext(BenchBaeContext);
+  const { bench, eatery, userLocation } = useContext(BenchBaeContext);
   const [benchPopupOpen, setBenchPopupOpen] = useState(false);
   const [eateryPopupOpen, setEateryPopupOpen] = useState(false);
+  const [userPopupOpen, setUserPopupOpen] = useState(false);
 
   if (!bench || !eatery) {
     return <Redirect to="/" />;
   }
 
-  // TODO: Get these from API in (long, lat) format
+  // Coordinates for map in (long, lat) format
+  const userCoords = [userLocation.long, userLocation.lat];
   const benchCoords = [bench.longitude, bench.latitude];
   const eateryCoords = [
     eatery.geometry.location.lng,
@@ -44,16 +41,6 @@ const ResultsPage = () => {
     <div className="results-main">
       <div className="results-content">
         <Nav />
-
-        {/* <div className="results-container">
-          <div className="results-bench">
-            <p>Bench</p>
-          </div>
-
-          <div className="results-eatery">
-            <p>Eatery</p>
-          </div>
-        </div> */}
         <div className="results-map">
           <Map
             style="mapbox://styles/mapbox/streets-v9"
@@ -63,6 +50,31 @@ const ResultsPage = () => {
             }}
             center={centerCoords}
           >
+            {userPopupOpen ? (
+              <Popup
+                coordinates={userCoords}
+                offset={{
+                  bottom: [0, -32],
+                }}
+              >
+                <p>This is your current location</p>
+                <button
+                  className="popup-close-button"
+                  onClick={() => setUserPopupOpen(false)}
+                >
+                  Close
+                </button>
+              </Popup>
+            ) : (
+              <></>
+            )}
+            <Marker
+              coordinates={userCoords}
+              onClick={() => setUserPopupOpen(true)}
+              anchor="bottom"
+            >
+              <img src={UserIcon} alt="User" className="user-icon-map" />
+            </Marker>
             {benchPopupOpen ? (
               <Popup
                 coordinates={benchCoords}
@@ -70,10 +82,15 @@ const ResultsPage = () => {
                   bottom: [0, -32],
                 }}
               >
-                <p>This is the nearest bench</p>
-                <p>{bench.location_detail}</p>
+                <p>
+                  This is the nearest bench
+                  <br/>
+                  Faces {bench.orientation === 'W' ? 'west' : 'east'}
+                  <br/>
+                  {bench.location_detail}
+                </p>
                 <button
-                  className="bench-close-button"
+                  className="popup-close-button"
                   onClick={() => setBenchPopupOpen(false)}
                 >
                   Close
@@ -102,7 +119,7 @@ const ResultsPage = () => {
                   {eatery.vicinity}
                 </p>
                 <button
-                  className="eatery-close-button"
+                  className="popup-close-button"
                   onClick={() => setEateryPopupOpen(false)}
                 >
                   Close
