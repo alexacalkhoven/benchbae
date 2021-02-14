@@ -91,7 +91,7 @@ const ResultsPage = () => {
                 <p>
                   This is the nearest bench
                   <br />
-                  Faces {FACING_MAP[bench.orientation]}
+                  Faces {FACING_MAP[bench.orientation] || 'West'}
                   <br />
                   {bench.location_detail}
                 </p>
