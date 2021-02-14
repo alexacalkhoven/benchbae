@@ -1,40 +1,40 @@
-html,
-body {
-  margin: 0;
-  height: 100;
-}
-
 .landingpage-main {
   background-image: linear-gradient(to bottom, #e8c0ccff, white);
 }
 
-.logo {
-  max-width: 40px;
-  margin: 7px;
-  height: auto;
-  float: left;
+.landingpage-content {
+  width: 65%;
+  margin: auto;
 }
 
-.bench-bae {
-  color: white;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 0;
-  font-size: 32px;
-}
-
-.two-people {
+.landingpage-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 250ms;
 }
 
-.bench-button {
-  background-color: #355c7d;
+.landingpage-loading {
+  margin: 40px 0px 40px 0px;
+}
+
+.landingpage-loading-container {
+  margin: auto;
+  width: fit-content;
+}
+
+.landingpage-button {
+  cursor: pointer;
+  /* background-color: #355c7d; */
+  background-color: white;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #355c7d;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -44,16 +44,78 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
+  margin-bottom: 50px;
+  transition: all 150ms ease;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 500ms;
 }
 
-.bench-button:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.landingpage-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  opacity: 0.9;
+}
+
+.landingpage-expand-icon {
+  color: white;
+  text-align: center;
+  transition: all 150ms ease;
+  margin-bottom: 200px;
+  transform-origin: bottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  
+}
+
+.landingpage-expand-icon span {
+  cursor: pointer;
+  font-size: 64px;
+  opacity: 0;
+  text-shadow: 2px 7px rgba(0, 0, 0, 0.05);
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+}
+
+.landingpage-expand-icon:hover {
+  opacity: 0.8;
 }
 
 .motivation {
   display: block;
-  margin-left: 10%;
-  margin-right: 10%;
+  color: #355c7d;
   margin-top: 30px;
   text-align: justify;
+}
+
+.arrow-bounce {
+  animation-name: arrow-bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-20px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-5px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
