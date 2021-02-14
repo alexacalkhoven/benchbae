@@ -12,12 +12,14 @@
   height: 100vh;
 }
 
-.landingpage-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  /* max-width: 900px; */
+.landingpage-image-container {
+  margin-top: 50px;
+}
+
+.landingpage-image-pretext {
+  color: #355c7d;
+  text-align: center;
+  font-size: 25px;
   opacity: 0;
   animation-name: fade-in;
   animation-fill-mode: forwards;
@@ -25,8 +27,18 @@
   animation-delay: 250ms;
 }
 
-.landingpage-image2 {
-  transform: scaleX(-1);
+.landingpage-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 750px;
+  /* max-width: 900px; */
+  opacity: 0;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 500ms;
 }
 
 .landingpage-loading {
@@ -60,7 +72,7 @@
   animation-name: fade-in;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 500ms;
+  animation-delay: 750ms;
 }
 
 .landingpage-button:hover {
@@ -91,7 +103,7 @@
   animation-name: fade-in;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 500ms;
+  animation-delay: 1000ms;
 }
 
 .landingpage-expand-icon:hover {
@@ -103,10 +115,37 @@
   height: 100vh;
 }
 
+.motivation-title {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.motivation-pretext {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.motivation-content {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 6%;
+}
+
+.motivation-icon {
+  width: 33%;
+  margin: auto;
+}
+
+.motivation-icon img {
+  width: 100%;
+}
+
 .motivation {
   display: block;
   color: #355c7d;
-  margin-top: 30px;
   text-align: justify;
 }
 
