@@ -70,8 +70,14 @@ const ResultsPage = () => {
                   bottom: [0, -32],
                 }}
               >
-                <p>Bench?!</p>
-                <button onClick={() => setBenchPopupOpen(false)}>Close</button>
+                <p>This is the nearest bench</p>
+                <p>{bench.location_detail}</p>
+                <button
+                  className="bench-close-button"
+                  onClick={() => setBenchPopupOpen(false)}
+                >
+                  Close
+                </button>
               </Popup>
             ) : (
               <></>
@@ -90,8 +96,17 @@ const ResultsPage = () => {
                   bottom: [0, -32],
                 }}
               >
-                <p>eatery!!!!?!</p>
-                <button onClick={() => setEateryPopupOpen(false)}>Close</button>
+                <p>
+                  {eatery.name}
+                  <br />
+                  {eatery.vicinity}
+                </p>
+                <button
+                  className="eatery-close-button"
+                  onClick={() => setEateryPopupOpen(false)}
+                >
+                  Close
+                </button>
               </Popup>
             ) : (
               <></>
