@@ -4,7 +4,7 @@ We are submitting to Tier 1, as well as the Google Cloud, Cloud Computing, Domai
 
 ## Access
 Find BenchBae here: https://benchbae.netlify.app/  
-Or hosted on Firebase: https://mmmpp-calgary-hacks-2021.web.app/
+Or hosted on Firebase: https://mmmpp-calgary-hacks-2021.web.app/  
 Or on our custom domain: http://benchbae.me/
 
 ## About
