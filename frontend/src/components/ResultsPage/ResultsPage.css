@@ -12,14 +12,6 @@
   margin: auto;
 }
 
-.results-plants {
-  position: absolute;
-  left: 25%;
-  display: block;
-  /* width: 500px; */
-  /* margin: auto; */
-}
-
 .results-container {
   display: grid;
   margin: auto;
@@ -28,6 +20,13 @@
   padding-top: 10%;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
+}
+
+.results-desc {
+  color: #725A7A;
+  font-size: 18px;
+  opacity: 0.9;
+  text-align: center;
 }
 
 .results-bench {
@@ -53,7 +52,8 @@
   border-radius: 4%;
   width: 100%;
   height: 60vh;
-  margin: 50px auto auto auto;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .user-icon-map {
@@ -75,12 +75,6 @@
   width: 32px;
   height: auto;
   display: block;
-}
-
-.results-hint {
-  color: white;
-  opacity: 0.9;
-  text-align: center;
 }
 
 /* Mapbox styling */

@@ -11,6 +11,12 @@ import Nav from '../Nav/Nav';
 
 const MAPBOX_TOKEN = process.env['REACT_APP_MAPBOX_TOKEN'] || '';
 
+const FACING_MAP: { [key: string]: string } = {
+  W: 'west',
+  nw: 'north-west',
+  sw: 'south-west',
+};
+
 const Map = ReactMapboxGl({
   accessToken: MAPBOX_TOKEN,
 });
@@ -84,9 +90,9 @@ const ResultsPage = () => {
               >
                 <p>
                   This is the nearest bench
-                  <br/>
-                  Faces {bench.orientation}
-                  <br/>
+                  <br />
+                  Faces {FACING_MAP[bench.orientation]}
+                  <br />
                   {bench.location_detail}
                 </p>
                 <button
@@ -136,7 +142,12 @@ const ResultsPage = () => {
               <img src={EateryIcon} alt="Eatery" className="eatery-icon-map" />
             </Marker>
           </Map>
-          <p className="results-hint">Click the icons for more info</p>
+          <p className="results-hint results-desc">
+            We found you a west-facing bench for you to watch the sunset on your
+            date, along with a nearby, highly-rated restaurant.
+            <br />
+            Click the icons for more info.
+          </p>
         </div>
       </div>
     </div>
