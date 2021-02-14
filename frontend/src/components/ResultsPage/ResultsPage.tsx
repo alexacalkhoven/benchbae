@@ -1,8 +1,12 @@
-import ReactMapboxGl, { Layer, Feature, Image } from 'react-mapbox-gl';
+import ReactMapboxGl, { Layer, Feature, Image, Marker } from 'react-mapbox-gl';
 import Plants from '../../assets/plants-plain.svg';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './ResultsPage.css';
-import Bench from '../../assets/benchbae8.png';
+import BenchIcon from '../../assets/bench_icon.png';
+import EatryIcon from '../../assets/fork_and_knife_icon.png';
+import BenchBaeContext from '../../contexts/BenchBaeContext';
+import { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 
 const MAPBOX_TOKEN = process.env['REACT_APP_MAPBOX_TOKEN'] || '';
 
@@ -11,9 +15,15 @@ const Map = ReactMapboxGl({
 });
 
 const ResultsPage = () => {
+  const { bench, eatery } = useContext(BenchBaeContext);
+
+  if (!bench || !eatery) {
+    return <Redirect to="/" />
+  }
+
   // TODO: Get these from API in (long, lat) format
-  const benchCoords = [-114.1, 51.0447];
-  const eateryCoords = [-114.0, 51.0447];
+  const benchCoords = [bench.longitude, bench.latitude];
+  const eateryCoords = [eatery.geometry.location.lng, eatery.geometry.location.lat];
   const centerCoords: [number, number] = [
     (benchCoords[0] + eateryCoords[0]) / 2,
     (benchCoords[1] + eateryCoords[1]) / 2,
@@ -40,21 +50,12 @@ const ResultsPage = () => {
           }}
           center={centerCoords}
         >
-          <Layer
-            type="symbol"
-            id="bench-marker"
-            layout={{ 'icon-image': 'garden-15' }}
-          >
-            {/* @ts-ignore */}
-            <Feature coordinates={benchCoords} />
-          </Layer>
-          <Layer
-            type="symbol"
-            id="eatery-marker"
-            layout={{ 'icon-image': 'restaurant-15' }}
-          >
-            <Feature coordinates={centerCoords} />
-          </Layer>
+          <Marker coordinates={benchCoords} anchor="bottom">
+            <img src={BenchIcon} className="bench-icon-map" />
+          </Marker>
+          <Marker coordinates={eateryCoords} anchor="bottom">
+            <img src={EatryIcon} className="eatry-icon-map" />
+          </Marker>
         </Map>
       </div>
     </div>
