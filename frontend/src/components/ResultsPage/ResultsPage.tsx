@@ -12,9 +12,9 @@ import Nav from '../Nav/Nav';
 const MAPBOX_TOKEN = process.env['REACT_APP_MAPBOX_TOKEN'] || '';
 
 const FACING_MAP: { [key: string]: string } = {
-  W: 'west',
-  nw: 'north-west',
-  sw: 'south-west',
+  W: 'West',
+  NW: 'North-West',
+  SW: 'South-West',
 };
 
 const Map = ReactMapboxGl({
