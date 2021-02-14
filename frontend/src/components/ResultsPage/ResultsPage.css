@@ -1,49 +1,69 @@
 .results-page {
-    background-image: linear-gradient(to bottom, #e8c0ccff, white);
-    width: 100%;
-    height: 100%;
+  background-image: linear-gradient(to bottom, #e8c0ccff, white);
+  width: 100%;
+  height: 100%;
 }
 
 .results-plants {
-    position: absolute;
-    left: 25%;
-    display: block;
-    /* width: 500px; */
-    /* margin: auto; */
+  position: absolute;
+  left: 25%;
+  display: block;
+  /* width: 500px; */
+  /* margin: auto; */
 }
 
 .results-container {
-    display: grid;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 100px;
-    padding-top: 10%;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+  display: grid;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 100px;
+  padding-top: 10%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
 }
 
 .results-bench {
-    text-align: center;
-    background: white;
-    border-radius: 4%;
-    width: 250px;
-    height: 100px;
-    z-index: 10;
+  text-align: center;
+  background: white;
+  border-radius: 4%;
+  width: 250px;
+  height: 100px;
+  z-index: 10;
 }
 
 .results-eatery {
-    margin-left: auto;
-    text-align: center;
-    background: white;
-    border-radius: 4%;
-    width: 250px;
-    height: 100px;
-    z-index: 10;
+  margin-left: auto;
+  text-align: center;
+  background: white;
+  border-radius: 4%;
+  width: 250px;
+  height: 100px;
+  z-index: 10;
 }
 
 .results-map {
-    border-radius: 4%;
-    width: 60%;
-    height: 40vh;
-    margin: auto;
+  border-radius: 4%;
+  width: 60%;
+  height: 40vh;
+  margin: auto;
+}
+
+.bench-icon {
+  width: 7%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.eatry-icon {
+  width: 5%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }

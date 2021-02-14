@@ -1,8 +1,9 @@
-import ReactMapboxGl, { Layer, Feature, Image } from 'react-mapbox-gl';
+import ReactMapboxGl, { Layer, Feature, Image, Marker } from 'react-mapbox-gl';
 import Plants from '../../assets/plants-plain.svg';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './ResultsPage.css';
-import Bench from '../../assets/benchbae8.png';
+import BenchIcon from '../../assets/bench_icon.png';
+import EatryIcon from '../../assets/fork_and_knife_icon.png';
 
 const MAPBOX_TOKEN = process.env['REACT_APP_MAPBOX_TOKEN'] || '';
 
@@ -40,21 +41,12 @@ const ResultsPage = () => {
           }}
           center={centerCoords}
         >
-          <Layer
-            type="symbol"
-            id="bench-marker"
-            layout={{ 'icon-image': 'garden-15' }}
-          >
-            {/* @ts-ignore */}
-            <Feature coordinates={benchCoords} />
-          </Layer>
-          <Layer
-            type="symbol"
-            id="eatery-marker"
-            layout={{ 'icon-image': 'restaurant-15' }}
-          >
-            <Feature coordinates={centerCoords} />
-          </Layer>
+          <Marker coordinates={benchCoords} anchor="bottom">
+            <img src={BenchIcon} className="bench-icon" />
+          </Marker>
+          <Marker coordinates={eateryCoords} anchor="bottom">
+            <img src={EatryIcon} className="eatry-icon" />
+          </Marker>
         </Map>
       </div>
     </div>
