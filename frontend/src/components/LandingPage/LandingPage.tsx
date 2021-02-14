@@ -71,7 +71,7 @@ const LandingPage = () => {
             from Calgary’s municipal open-source data. Read more about our story
             below!
           </p>
-          <p className="motivation-content">
+          <div className="motivation-content">
             <div className="motivation-section">
               <div className="motivation-icon">
                 <img src={CovidIcon} alt="Covid" />
@@ -125,7 +125,7 @@ const LandingPage = () => {
                 it most.
               </p>
             </div>
-          </p>
+          </div>
 
           {/* <p className="motivation">
             BenchBae was inspired by a dataset detailing the city’s memorial and

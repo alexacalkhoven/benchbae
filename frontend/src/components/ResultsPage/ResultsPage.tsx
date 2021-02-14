@@ -85,7 +85,7 @@ const ResultsPage = () => {
                 <p>
                   This is the nearest bench
                   <br/>
-                  Faces {bench.orientation === 'W' ? 'west' : 'east'}
+                  Faces {bench.orientation}
                   <br/>
                   {bench.location_detail}
                 </p>

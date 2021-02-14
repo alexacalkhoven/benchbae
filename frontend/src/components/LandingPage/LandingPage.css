@@ -1,6 +1,6 @@
 .landingpage-main {
   background-image: linear-gradient(to bottom, #e8c0ccff, white);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .landingpage-content {
@@ -112,6 +112,7 @@
 
 .motivation-container {
   padding-top: 120px;
+  padding-bottom: 100px;
   height: 100vh;
 }
 
