@@ -42,10 +42,10 @@ const ResultsPage = () => {
           center={centerCoords}
         >
           <Marker coordinates={benchCoords} anchor="bottom">
-            <img src={BenchIcon} className="bench-icon" />
+            <img src={BenchIcon} className="bench-icon-map" />
           </Marker>
           <Marker coordinates={eateryCoords} anchor="bottom">
-            <img src={EatryIcon} className="eatry-icon" />
+            <img src={EatryIcon} className="eatry-icon-map" />
           </Marker>
         </Map>
       </div>
