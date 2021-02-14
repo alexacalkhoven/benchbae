@@ -12,7 +12,7 @@
 }
 
 .landingpage-image-container {
-  /* margin-top: 50px; */
+  margin-top: 25vw;
 }
 
 .landingpage-image-pretext {
@@ -36,7 +36,9 @@
   /* max-width: 400px; */
   /* max-width: 200px; */
   /* max-width: 900px; */
-  max-height: 47vh;
+  /* max-height: 47vh; */
+  width: 100%;
+  max-width: 80vw;
   opacity: 0;
   animation-name: fade-in;
   animation-fill-mode: forwards;
@@ -68,7 +70,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 25vw;
   margin-bottom: 50px;
   transition: all 150ms ease;
   opacity: 0;
@@ -171,7 +173,7 @@
   }
 }
 
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 950px) {
   .motivation-content {
     display: grid;
     grid-template-rows: 100%;
@@ -181,6 +183,19 @@
 
   .motivation-section {
     margin: 0;
+  }
+
+  .landingpage-image {
+    width: unset;
+    max-height: 47vh;
+  }
+
+  .landingpage-image-container {
+    margin-top: 0;
+  }
+
+  .landingpage-button {
+    margin-top: 5%;
   }
 }
 
