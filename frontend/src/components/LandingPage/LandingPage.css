@@ -1,0 +1,27 @@
+html,
+body {
+  margin: 0;
+  height: 100;
+}
+
+.landingpage-main {
+  background-image: linear-gradient(to bottom, #e8c0ccff, white);
+}
+
+.logo {
+  max-width: 20%;
+  height: auto;
+}
+
+.two-people {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.bench-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
