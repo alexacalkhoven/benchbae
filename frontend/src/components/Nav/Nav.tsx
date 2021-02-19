@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/benchbae8.png';
+import Logo from '../../assets/benchbae_logo.png';
 import './Nav.css';
 
 const Nav = ({ fade = false }: { fade?: boolean }) => {

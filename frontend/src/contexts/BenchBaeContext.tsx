@@ -34,10 +34,8 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
       setLoading(true);
 
       if (!navigator.geolocation) {
-        alert('Sorry, geolocation not supported');
         setLoading(false);
-
-        reject();
+        reject('Geolocation not supported');
       }
 
       navigator.geolocation.getCurrentPosition(
@@ -61,15 +59,13 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
               resolve(bench);
             })
             .catch((err) => {
-              alert(err);
               reject(err);
             })
             .finally(() => setLoading(false));
         },
         (err) => {
-          alert(err);
           setLoading(false);
-          reject(err);
+          reject(err.message);
         }
       );
     });
@@ -78,7 +74,7 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
   const requestEatery = (bench: Bench): Promise<Eatery> => {
     return new Promise((resolve, reject) => {
       if (!bench) {
-        reject('no bench');
+        reject('Invalid bench');
       }
 
       setLoading(true);
@@ -98,7 +94,6 @@ export const BenchBaeProvider = ({ children }: { children: any }) => {
           resolve(eatery);
         })
         .catch((err) => {
-          alert(err);
           reject(err);
         })
         .finally(() => setLoading(false));

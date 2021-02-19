@@ -8,6 +8,7 @@ import BenchBaeContext from '../../contexts/BenchBaeContext';
 import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 
 const MAPBOX_TOKEN = process.env['REACT_APP_MAPBOX_TOKEN'] || '';
 
@@ -150,6 +151,7 @@ const ResultsPage = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

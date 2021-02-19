@@ -1,0 +1,19 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.footer-icon {
+    text-decoration: none;
+    width: 64px;
+    font-size: 64px;
+    transition: opacity 150ms ease;
+    color: black;
+    padding: 0px 5px 0px 5px;
+}
+
+.footer-icon:hover {
+    opacity: 0.65;
+}
