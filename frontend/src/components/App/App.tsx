@@ -5,6 +5,7 @@ import { BenchBaeProvider } from '../../contexts/BenchBaeContext';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import './App.css';
 
+// Material UI Theme
 const MuiTheme = createMuiTheme({
   palette: {
     primary: {
@@ -13,6 +14,7 @@ const MuiTheme = createMuiTheme({
   }
 });
 
+// Container for app
 const App = () => {
   return (
     <BenchBaeProvider>

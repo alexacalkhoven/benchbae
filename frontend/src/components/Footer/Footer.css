@@ -8,6 +8,7 @@
 .footer-icon {
     text-decoration: none;
     width: 64px;
+    height: 64px;
     font-size: 64px;
     transition: opacity 150ms ease;
     color: black;

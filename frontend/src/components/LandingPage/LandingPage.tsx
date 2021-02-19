@@ -1,6 +1,5 @@
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-import './LandingPage.css';
 import HealthIcon from '../../assets/health_icon.png';
 import CovidIcon from '../../assets/covid_icon.png';
 import DateIcon from '../../assets/date_icon.png';
@@ -9,6 +8,7 @@ import BenchBaeContext from '../../contexts/BenchBaeContext';
 import { useContext, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { CircularProgress } from '@material-ui/core';
+import './LandingPage.css';
 
 const LandingPage = () => {
   const history = useHistory();

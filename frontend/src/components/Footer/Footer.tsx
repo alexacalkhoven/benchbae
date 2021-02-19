@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import DevPostLogo from '../../assets/devpost_logo.png';
+import DevPostLogo from '../../assets/devpost_logo.svg';
 import './Footer.css';
 
 const DEVPOST_URL = 'https://devpost.com/software/benchbae';

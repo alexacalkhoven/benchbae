@@ -5,7 +5,7 @@ import BenchIcon from '../../assets/bench_icon.png';
 import EateryIcon from '../../assets/fork_and_knife_icon.png';
 import UserIcon from '../../assets/user_icon.png';
 import BenchBaeContext from '../../contexts/BenchBaeContext';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
@@ -28,6 +28,7 @@ const ResultsPage = () => {
   const [eateryPopupOpen, setEateryPopupOpen] = useState(false);
   const [userPopupOpen, setUserPopupOpen] = useState(false);
 
+  // Only allow user to see results page if we have results to display
   if (!bench || !eatery) {
     return <Redirect to="/" />;
   }
