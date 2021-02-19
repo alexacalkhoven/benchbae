@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'w7q6*^(nnwbs^4n45$&u4$d87tae%#=q_^0a6q8yy3cci+%=+n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = "True" == os.getenv("DEBUG")
 
 # Configure database
 DATABASES = {
