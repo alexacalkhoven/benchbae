@@ -1,6 +1,5 @@
 # BenchBae
-MMPP (Team 1) Calgary Hacks 2021 Submission.  
-We are submitting to Tier 1, as well as the Google Cloud, Cloud Computing, Domain Name and UX/UI bounty.
+Tier 1 Second Place Overall winner for Calgary Hacks 2021.  
 
 ## Access
 Find BenchBae here: https://benchbae.netlify.app/  
