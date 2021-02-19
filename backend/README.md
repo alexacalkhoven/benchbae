@@ -1,8 +1,8 @@
-# BenchBae Frontend
+# BenchBae Backend
 
-## Running
+### Running
 To run the project, the following environment variables need to be set
 ```bash
-REACT_APP_API_URL=xxxx
-REACT_APP_MAPBOX_TOKEN=xxxx
+DATABASE_URL=postgres://xxx
+GOOGLE_API_KEY=xxxxx
 ```
